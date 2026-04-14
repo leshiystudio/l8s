@@ -1,0 +1,181 @@
+body {
+    background: url("/web/20250128180232im_/https://l8s.ru/img/stars.jpg") repeat scroll 0 -93px #00031A;
+	color: #ffffff;
+	overflow: hidden;
+	font-family: monospace;
+	font-size:20pt;
+	text-align: center;
+	margin:0px;
+}
+
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+#sun {
+    border:2px solid #000000;
+    width:1px;
+    height:1px;
+    left: 960px; top: 464.5px; 
+	position: relative;
+}
+#sun img { position: absolute;}
+
+#kosmos {
+    width:800px;
+    height: 600px
+    position: relative;
+}
+.planet {
+	/*background: none repeat scroll 0 0 #008000;
+    /*border: 1px solid #FFFFFF;*/
+    position: absolute;
+    /*min-width:64px;
+    min-height:64px;*/
+
+	text-align: center;
+	/*overflow: hidden;*/
+}
+.planet img {
+    height: 75px;
+	position:relative;
+	left:0px;
+	top:0px;
+	border-radius: 100px;
+    box-shadow: #22b0bf 1px 1px 24px;
+}
+.planet h3 {
+	text-align: left;
+    width: 120px;
+    left: 0;
+    position: absolute;
+}
+#log {
+    position: absolute;
+    left: 130px;
+    top: 0px;
+    width:100px;
+    height:50px;
+}
+canvas{
+	left: 0px;
+	top: 0px;
+	position: absolute;
+}
+#infowindow{
+	text-align: center;
+    border-radius: 5px;
+    position: absolute;
+    padding: 10px;
+    width: 180px;
+    background-color: gray;
+	font-size: 50%;
+}
+#infopreview{
+	border-radius: 50%;
+	width: 50px;
+}
+
+.stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: rotate 600s infinite linear;
+  }
+  
+.star {
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: estrela;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.star.style1 { animation-duration: 0.5s; animation-name: estrela; }
+.star.style2 { animation-duration: 1s; animation-name: estrela; }
+.star.style3 { animation-duration: 1.5s; animation-name: estrela; }
+.star.style4 { animation-duration: 2s; animation-name: estrelaDestacada; }
+
+.star.tam1 { width: 1px; height: 1px; }
+.star.tam2 { width: 2px; height: 2px; }
+.star.tam3 { width: 3px; height: 3px; }
+
+.star.opacity1 { opacity:  1; }
+.star.opacity2 { opacity: .5; }
+.star.opacity3 { opacity: .1; }
+  
+
+
+
+/* animations */
+@keyframes shake{
+	100%{
+		 transform: translateX(-80px);
+	}
+}
+
+@media (max-width: 992px) {
+  .name {
+    display: none;
+  }
+}
+
+/* stars */
+@keyframes estrela {
+    0% {
+      box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);
+    }
+    50% {
+      box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+      box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);
+    }
+}
+  
+@keyframes estrelaDestacada {
+    0% {
+      background-color: #FFFFFF;
+      box-shadow: 0 0 10px 0px rgba(255, 255, 255, 1);
+    }
+    20% {
+      background-color: #FFC4C4;
+      box-shadow: 0 0 10px 0px rgb(255, 196, 196, 1);
+    }
+    80% {
+      background-color: #C4CFFF;
+      box-shadow: 0 0 10px 0px rgb(196, 207, 255, 1);
+    }
+    100% {
+      background-color: #FFFFFF;
+      box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.2);
+    }
+}
+
+@keyframes rotate {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+  
+/*
+     FILE ARCHIVED ON 18:02:32 Jan 28, 2025 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:09:12 Apr 14, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 8.329
+  load_resource: 139.456
+  PetaboxLoader3.resolve: 92.257
+  PetaboxLoader3.datanode: 16.099
+*/

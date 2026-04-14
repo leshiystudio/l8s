@@ -1,0 +1,135 @@
+<!DOCUMENT html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="yandex-verification" content="b3ee241abe4037dc" />
+    <meta name="mailru-domain" content="3vUG4lQRAQdYrfbr" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/font/font.css" />
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <title>L8S.ru - LeshiyStudio</title>
+</head>
+<body>
+<div style="top: 0px; left: 0px; right: 0px; bottom: 0px; position: fixed; z-index: 3; background: url(&quot;/img/stars.jpg&quot;) repeat scroll 0px 0px rgb(0, 0, 0);" id="load"><center><div style="position: absolute; top: 40%; left: 46%; animation: shake .7s ease-in-out alternate infinite;"><img style="height: 50px;" src="img/earthc.png"><h2></h2></div></center></div>
+<canvas id="cnv" style="display: block;"></canvas>
+<nav class="navbar sticky-top  navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" style="width: 60%;max-width: 160;">
+        <img src="img/l8s.ru.png" alt="L8S.ru" style="width: 40%;margin: auto;" />
+    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item  dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSocials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Соцсети
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownSocials">
+          <a class="dropdown-item" href="https://vk.com/leshiy_studio">VK</a>
+          <!--<a class="dropdown-item" href="https://www.instagram.com/leshiystudio/">Instagram</a>-->
+        </div>
+      </li>
+<!--       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProjects" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Проекты
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownProjects">
+          <a class="dropdown-item" href="https://cartmon.l8s.ru">Мониторинг картриджей</a>
+        </div>
+      </li>
+ -->      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHobby" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Хобби
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownHobby">
+          <a class="dropdown-item" href="https://500px.com/leshiystudio">Фото</a>
+          <a class="dropdown-item" href="https://ficbook.net/authors/3302469">Рассказы</a>
+<!--           <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="http://smm.l8s.ru">KryukON SMM</a>
+ -->        </div>
+      </li>
+
+      <!--<li class="nav-item ">
+        <a class="dropdown-item alert alert-danger" href="https://yasobe.ru/na/sigma_art">Я соберу!</a>
+      </li>
+      -->
+    </ul>
+  </div>
+</nav>
+<div id="sun"><img src="img/ls.png" alt="LeshiyStudio" />
+</div>
+<div class="stars"></div>
+<div id="kosmos">
+    <div class="planet" rad="30">
+        <div class="description" style="display:none;">Моя личная страница во ВКонтакте. Добро пожаловать!</div>
+        <a title="My VK" href="http://vk.com/leshiy_studio">
+            <h3 class="name">My VK</h3>
+            <img class="icon" src="img/earthc.png" />
+        </a>
+        <img class="preview" src="img/iam.jpg" style="display:none;">
+    </div>
+    <!--
+    <a title="МультОзвучка" href="http://multator.l8s.ru" class="planet" rad="40" style="left: 1067.93px; top: 197.069px;">
+    <h3>МультОзвучка</h3>
+    <img src="img/earthc.png" />
+    </a>
+    -->
+    <!--
+    <div class="planet" rad="50">
+        <div class="description" style="display:none;">Мои услуги в SMM продвижении.</div>
+        <a title="KryukON SMM" href="http://smm.l8s.ru">
+            <h3 class="name">KryukON SMM</h3>
+            <img class="icon" src="img/earthc.png" />
+        </a>
+        <img class="preview" src="img/logokon.png" style="display:none;">
+    </div>
+    -->
+    <!--
+    <div class="planet" rad="70">
+        <div class="description" style="display:none;">Старый проект для рисовашек</div>
+        <a title="МультаЧ" href="http://multach.l8s.ru">
+            <h3 class="name">МультаЧ</h3>
+            <img class="icon" src="img/earthc.png" />
+        </a>
+        <img class="preview" src="img/earthc.png" style="display:none;">
+    </div>
+    
+
+    <div class="planet" rad="70">
+        <div class="description" style="display:none;">Описание</div>
+        <a title="TEST" href="#">
+            <h3 class="name">TEST</h3>
+            <img class="icon" src="img/earthc.png" />
+        </a>
+        <img class="preview" src="#" style="display:none;">
+    </div>
+    -->
+
+</div>
+<div id="infowindow" style="position:absolute; padding:10px 10px 15px 10px; display: none; width: 180px; background-color: gray;">
+    <img id="infopreview" src="#" >
+    <div id="infobody"></div>
+    <div style="bottom: -10px;transform: rotate(45deg);width: 20px;height: 20px;position: absolute;background: gray;left: calc(50% - 10px);"></div>
+</div>
+<div id="log" style="display:block;"></div>
+<!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=26100165&amp;from=informer" style="bottom:0px;left:0px;position:absolute;" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/26100165/3_0_202020FF_000000FF_1_pageviews" style="width:88px; height:31px; border:0;" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="26100165" data-lang="ru" /></a> <!-- /Yandex.Metrika informer --> <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(26100165, "init", { id:26100165, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/26100165" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+<script>
+window.replainSettings = { id: 'dddecadf-dd28-42cb-bfa3-34cf65efdb8a' };
+(function(u){var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=u;
+var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);
+})('https://widget.replain.cc/dist/client.js');
+</script>
+
+</body>
+</html>
