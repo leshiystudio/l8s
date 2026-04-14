@@ -141,7 +141,8 @@ window.addEventListener('load', function() {
 
 	$("#sun img").css({"left":-parseInt($("#sun img").css("width"))/2,"top":-parseInt($("#sun img").css("height"))/2});
 
-	$(".planet").mouseenter(function(){
+	$(".planet")
+	.on("mouseenter touchstart", function(){
 		clearTimeout(infoWindowTimeOut);
 		$self = $(this);
 		arr[$self.index()+1].run = false;
@@ -151,7 +152,7 @@ window.addEventListener('load', function() {
 		var previewlink = $self.find(".preview").attr("src");
 		infowindowShow(description,previewlink);
 	})
-	.mouseleave(function() {
+	.on("mouseleave touchend", function() {
 		arr[$(this).index()+1].run = true;
 		infoWindowTimeOut = setTimeout(function(){ $("#infowindow").hide(); lastmouseenter=-1;}, 4000);
 	});
