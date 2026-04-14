@@ -1,10 +1,11 @@
 var arr=[];
 var sp=0.5;
-var ctx,cnv,_x,_y;
+var ctx,cnv;
 var _shag=Math.PI/720;
 var lastmouseenter;
 var infoWindowTimeOut;
 var timeOutCnvDraw=false;
+var $self;
 
 function getClientWidth() {
 	return window.innerWidth;
@@ -36,7 +37,6 @@ function initcircle(_lineWidth=false,_di=false){
 	if(timeOutCnvDraw){clearTimeout(timeOutCnvDraw);}
 	if(ctx){
 		ctx.clearRect(0, 0, cnv.width, cnv.height);
-		_centert = getClientHeight()/2;
 		let i;
 		let lineWidth;
 		$.each( $(".planet"), function( obj, value ) {
@@ -56,8 +56,8 @@ function initcircle(_lineWidth=false,_di=false){
 			}
 			do{
 				i=i+((_di)?_di:(-Math.PI/(15/obj)));
-				_left = funcLeft(i,obj,value);
-				_top  = funcTop(i,obj,value);
+				let _left = funcLeft(i,obj,value);
+				let _top  = funcTop(i,obj,value);
 				ctx.strokeStyle = "rgba(80,150,250,0.03)";
 				ctx.lineCap = "round";
 				ctx.lineJoin = "round";
@@ -74,34 +74,34 @@ function initcircle(_lineWidth=false,_di=false){
 }
 
 function funcLeft(i,obj,value){
-	_centerl = getClientWidth()/2;
-	_d=parseFloat($(value).attr("rad"));
+	var _centerl = getClientWidth()/2;
+	var _d = parseFloat($(value).attr("rad"));
 	_d=(_centerl/100)*_d;
 	return _centerl + Math.sin(( i -(Math.PI/180)*(24+obj*8) )/(obj||1)*sp+obj*10)*_d;
 }
 
 function funcTop(i,obj,value){
-	_centert = getClientHeight()/2;
-	_d=parseFloat($(value).attr("rad"));
+	var _centert = getClientHeight()/2;
+	var _d = parseFloat($(value).attr("rad"));
 	_d=(_centert/100)*_d;
 	return _centert + Math.cos( i /(obj||1)*sp+obj*10)*_d/1.5;
 }
 
 function infowindowMoveTo($self){
-	$infowindow = $("#infowindow");
-	infowidth = $infowindow.innerWidth();
-	infoheight = $infowindow.innerHeight();
-	_x=parseFloat($self.css("left"))-infowidth/2+$self.innerWidth()/2;
-	_y=parseFloat($self.css("top"))-infoheight-30;
+	var $infowindow = $("#infowindow");
+	var infowidth = $infowindow.innerWidth();
+	var infoheight = $infowindow.innerHeight();
+	var _x = parseFloat($self.css("left"))-infowidth/2+$self.innerWidth()/2;
+	var _y = parseFloat($self.css("top"))-infoheight-30;
 	_y=_y>0?_y:parseFloat($self.css("top"))+$self.innerHeight()+30;
 	$infowindow.css({left:_x,top:_y});
 }
 
 function infowindowShow(description,previewlink){
-	$infowindow = $("#infowindow");
+	var $infowindow = $("#infowindow");
 	$infowindow.hide();
-	$infopreview = $infowindow.find("#infopreview");
-	$infobody = $infowindow.find("#infobody");
+	var $infopreview = $infowindow.find("#infopreview");
+	var $infobody = $infowindow.find("#infobody");
 	$infobody.html("");
 	$infopreview.attr("src","#");
 	$infobody.html(description);
@@ -147,8 +147,8 @@ window.addEventListener('load', function() {
 		arr[$self.index()+1].run = false;
 		lastmouseenter = $self.index()+1;
 
-		description = $self.find(".description").html();
-		previewlink = $self.find(".preview").attr("src");
+		var description = $self.find(".description").html();
+		var previewlink = $self.find(".preview").attr("src");
 		infowindowShow(description,previewlink);
 	})
 	.mouseleave(function() {
@@ -164,14 +164,14 @@ window.addEventListener('load', function() {
 		$.each( $(".planet"), function( obj, value ) {
 			obj++;
 			if (typeof(arr[obj]) == "undefined"){
-				_x = funcLeft(-Math.PI+_shag,obj,value);
-				_y = funcTop(-Math.PI+_shag,obj,value);
+				var _x = funcLeft(-Math.PI+_shag,obj,value);
+				var _y = funcTop(-Math.PI+_shag,obj,value);
 				arr[obj]={i:-Math.PI,x:_x,y:_y,run:true};
 				console.log("planet_ok: "+obj);
 			}
 
-			_left = funcLeft(arr[obj].i-(Math.PI/180)*8,obj,value);
-			_top  = funcTop(arr[obj].i,obj,value);
+			var _left = funcLeft(arr[obj].i-(Math.PI/180)*8,obj,value);
+			var _top  = funcTop(arr[obj].i,obj,value);
 
 			var lw=80;
 			var temp = (_top<_centert+350)?parseInt((_centert+350 - _top)/15):0;
