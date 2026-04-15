@@ -123,8 +123,8 @@ function initStars(){
 	var qtdeEstrelas = 500;
 	var noite = document.querySelector(".stars");
 	noite.innerHTML="";
-	var widthWindow = window.innerWidth;
-	var heightWindow = window.innerHeight;
+	var widthWindow = noite.offsetWidth;
+	var heightWindow = noite.offsetHeight;
 
 	for (var i = 0; i < qtdeEstrelas; i++) {
 		stars += "<span class='star " + style[getRandomArbitrary(0, 4)] + " " + opacity[getRandomArbitrary(0, 6)] + " "
