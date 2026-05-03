@@ -135,7 +135,7 @@ function initStars(){
 	noite.innerHTML = stars;
 }
 
-window.addEventListener('load', function() {
+document.addEventListener('DOMContentLoaded', function() {
 	var _centerl = getClientWidth()/2;
 	var _centert = getClientHeight()/2;
 
